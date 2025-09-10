@@ -7,10 +7,7 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/DFilyushin/chrome-extension-make-password)](https://github.com/DFilyushin/chrome-extension-make-password/releases/latest)
 [![GitHub last commit](https://img.shields.io/github/last-commit/DFilyushin/chrome-extension-make-password?label=Last+update)](https://github.com/DFilyushin/chrome-extension-make-password/commits/main)
 
-<picture>
-	<source srcset="![Генератор паролей в Chrome](./image.png)">	
-	<img alt="Генератор паролей в Chrome">
-</picture>
+![Генератор паролей в Chrome](./image.png)
 
 Простое расширение для Chrome генерации безопасных паролей различных типов.
 
