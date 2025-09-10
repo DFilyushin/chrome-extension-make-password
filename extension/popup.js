@@ -199,13 +199,11 @@ function initializeModal() {
 
     // Открытие модального окна
     infoBtn.addEventListener('click', () => {
-        console.log("OPEN");
         modal.classList.add('show');
     });
 
     // Закрытие модального окна
     closeBtn.addEventListener('click', () => {
-     console.log("CLOSE");   
      modal.classList.remove('show');
     });
 
