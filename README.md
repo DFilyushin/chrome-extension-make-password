@@ -8,7 +8,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/DFilyushin/chrome-extension-make-password?label=Last+update)](https://github.com/DFilyushin/chrome-extension-make-password/commits/main)
 
 <picture>
-	<source srcset="![Генератор паролей в Chrome](image.png)">	
+	<source srcset="![Генератор паролей в Chrome](./image.png)">	
 	<img alt="Генератор паролей в Chrome">
 </picture>
 
