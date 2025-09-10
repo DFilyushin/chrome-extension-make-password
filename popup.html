@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Генератор паролей</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Генератор паролей 🔐</h1>
+            <button id="infoBtn" class="info-btn" title="О разработчике">👤</button>
+
+
+            <!-- Вкладки -->
+            <div class="tabs">
+                <button class="tab-button active" data-tab="random">🎲 Случайный</button>
+                <button class="tab-button" data-tab="memorable">📚 Запоминаемый</button>
+                <button class="tab-button" data-tab="pin">💳 PIN-код</button>
+            </div>
+
+            <!-- Содержимое вкладок -->
+            <div class="tab-content">
+                <!-- Случайный пароль -->
+                <div id="random" class="tab-pane active">
+                    <div class="form-group">
+                        <label for="randomLength">Длина пароля:</label>
+                        <input type="range" id="randomLength" min="8" max="32" value="20">
+                        <span id="randomLengthValue">20</span>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="addNumbers" checked>
+                            <span class="checkbox-custom"></span>
+                            Цифры
+                        </label>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="addSpecSymbols">
+                            <span class="checkbox-custom"></span>
+                            Символы
+                        </label>
+                    </div>
+                    <button id="generateRandom" class="generate-btn">Генерировать</button>
+                </div>
+
+                <!-- Запоминаемый пароль -->
+                <div id="memorable" class="tab-pane">
+                    <div class="form-group">
+                        <label for="wordCount">Количество слов:</label>
+                        <input type="range" id="wordCount" min="2" max="6" value="4">
+                        <span id="wordCountValue">4</span>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="addSymbols">
+                            <span class="checkbox-custom"></span>
+                            Добавить доп. символы
+                        </label>
+                    </div>
+                    <button id="generateMemorable" class="generate-btn">Генерировать</button>
+                </div>
+
+                <!-- PIN-код -->
+                <div id="pin" class="tab-pane">
+                    <div class="form-group">
+                        <label for="pinLength">Количество цифр:</label>
+                        <input type="range" id="pinLength" min="3" max="6" value="4">
+                        <span id="pinLengthValue">4</span>
+                    </div>
+                    <button id="generatePin" class="generate-btn">Генерировать</button>
+                </div>
+            </div>
+
+            <!-- Результат -->
+            <div class="result-container">
+                <div class="password-output">
+                    <input type="text" id="generatedPassword" readonly placeholder="Нажмите генерировать">
+                    <button id="copyPassword" class="copy-btn">📋</button>
+                </div>
+                <div id="copyMessage" class="copy-message">Скопировано!</div>
+            </div>
+        </div>
+
+        <!-- Модальное окно -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>О разработчике</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="developer-info">
+                        <div class="avatar">👨‍💻</div>
+                        <h3>Генератор Паролей v1.0</h3>
+                        <p>Простое расширение для генерации безопасных паролей различных типов.</p>
+                        <div class="features">
+                            <h4>Возможности:</h4>
+                            <ul>
+                                <li>Случайные пароли c настраиваемой длиной</li>
+                                <li>Запоминаемые пароли на основе английских слов</li>
+                                <li>PIN-коды различной длины</li>
+                                <li>Быстрое копирование в буфер обмена</li>
+                            </ul>
+                        </div>
+
+                        <div class="links">
+                            <p>Филюшин Дмитрий, 2025</p>
+                            <a href="https://github.com/DFilyushin" target="_blank" class="link-btn">
+                                <span class="icon">📦</span>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+
+</html>
